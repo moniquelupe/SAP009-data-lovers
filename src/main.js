@@ -6,9 +6,9 @@ const printarCartoes = function () {
   for (let index = 0; index < 20; index++) { // a crase inicia a template string e também finaliza
     let cartao = `
     <div class="card">
-      <h2>${data.films[index].title}</h2>
-      <p>Informações sobre o filme:${data.films[index].description}</p>
       <img class="image" src="${data.films[index].poster}" alt="Poster do filme ${data.films[index].title}"/>
+      <h2>${data.films[index].title}</h2>
+      <p>${data.films[index].description}</p>
     </div>
   `;
     document.getElementById("cartões").innerHTML += cartao; // inclui no html 
@@ -30,4 +30,5 @@ const filtrarCartoes = function (diretorSelecionado) {
       diretorFiltrado.push(i);
     }
   }
+  console.log(diretorFiltrado)
 }

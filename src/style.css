@@ -5,22 +5,24 @@ body {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 7px 7px 13px 0px rgba(0, 2, 4, 0.22);
   padding: 15px;
-  margin: 30px;
-  width: 350px;
   transition: all 0.3s ease-out;
-  color: #084475;
   background-color: #469bd2;  
-  font-size: 17px;
+  width: 28%;
 }
+
+.card h2 {
+  font-size: 25px;
+}
+
 .card p {
-  display: flex;
   color: #32373c;
   font-size: 15px;
-  font-family: "Poppins", sans-serif;
-
 }
 
 .card:hover {
@@ -28,5 +30,13 @@ body {
   cursor: pointer;
 }
 
+.todos-os-cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  margin: 30px;
+}
 
 
