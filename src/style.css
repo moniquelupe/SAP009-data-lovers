@@ -1,19 +1,26 @@
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #fafafa;
+  background-color: whitesmoke;
+  color: #084475;
 }
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .card {
-  border-radius: 5px;
-  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-  padding: 30px;
-  margin: 20px;
-  width: 400px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 13px 0px rgba(0, 2, 4, 0.22);
+  padding: 15px;
+  margin: 30px;
+  width: 350px;
   transition: all 0.3s ease-out;
+  color: #084475;
+  background-color: #469bd2;  
+  font-size: 17px;
+}
+.card p {
+  display: flex;
+  color: #32373c;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+
 }
 
 .card:hover {
@@ -21,7 +28,5 @@ body {
   cursor: pointer;
 }
 
-.card p {
-  color: #a3a5ae;
-  font-size: 16px;
-}
+
+

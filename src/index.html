@@ -12,20 +12,21 @@
   <header class="cabeçalho">
     <h1 class="cabeçalho_titulo">MUSEU DO STUDIO GHIBLI</h1>
     <a class="cabeçalho_links" href=" https://pt.wikipedia.org/wiki/Studio_Ghibli" target="_blank">Sobre</a>
-
   </header>
 
   <main>
     <section class="busca">
       <h1>Conheça e navegue pelo Universo Ghibli!</h1>
-      <select name="categoria">
-        <option value="Selecione aqui..." selected hidden>Selecione aqui...</option>
-        <option value="Diretores, roteiristas e Produtores">Diretores, roteiristas e produtores</option>
-        <option value="Filmes por título">Filmes</option>
-        <option value="Linha do tempo">Linha do tempo</option>
-        <option value="Ver tudo">Ver tudo</option>
+      <label for="diretores">Escolha seu diretor favorito:</label>
+      <select name="categoria" id="diretores">
+        <option value="Selecione aqui...">Selecione aqui...</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
       </select>
-      <button id="filtrar">Filtrar</button>
     </section>
     <section class="todos-os-cartões" id="cartões">
     </section>
