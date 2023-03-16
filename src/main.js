@@ -21,14 +21,25 @@ diretores.addEventListener("change", function (event) {
   filtrarCartoes(event.target.value)
 })
 
+
 // Declarar função filtrar cartões:
 const filtrarCartoes = function (diretorSelecionado) {
   const arrayDeFilmes = data.films
   const diretorFiltrado = [];
   for (let i of data.films) {
-    if (i.director.toLocaleLowerCase() === diretorSelecionado.toLocaleLowerCase()) {
+    if (i.director.toLowerCase() === diretorSelecionado.toLowerCase()) {
       diretorFiltrado.push(i);
     }
   }
-  console.log(diretorFiltrado)
+  let cartoesFiltrados = "";
+  for (let i = 0; i < diretorFiltrado.length; i++) {
+    cartoesFiltrados += `
+    <div class="card">
+      <img class="image" src="${diretorFiltrado[i].poster}" alt="Poster do filme ${diretorFiltrado[i].title}"/>
+      <h2>${diretorFiltrado[i].title}</h2>
+      <p>${diretorFiltrado[i].description}</p>
+    </div>
+    `;
+  }
+  document.getElementById("cartões").innerHTML = cartoesFiltrados;
 }

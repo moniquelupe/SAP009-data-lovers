@@ -4,6 +4,38 @@ body {
   color: #084475;
 }
 
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #084475;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.cabecalho_titulo {
+  color: whitesmoke;
+  font-size: 30px;
+  margin: 0;
+}
+
+.cabecalho_links {
+  color: whitesmoke;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-out;
+}
+
+.cabecalho_links:hover {
+  text-decoration: underline;
+  background-color: #469bd2;
+}
+
+/* Estilo dos cartões
+Esse seletor tá puxando a class card de dentro do main.js, na linha 8: <div class="card"> */ 
 .card {
   display: flex;
   flex-direction: column;
@@ -15,21 +47,24 @@ body {
   background-color: #469bd2;  
   width: 28%;
 }
-
+/* Estilo do nome do filme dentro do cartão */
 .card h2 {
   font-size: 25px;
 }
-
+/* Estilo do parágrafo de info sobre o filme dentro do cartão */
 .card p {
   color: #32373c;
   font-size: 15px;
 }
-
+/* O :hover adiciona interação ao cartão, nesse caso está dando uma 
+leve mexida quando passamos o mouse em cima do cartão */
 .card:hover {
   transform: translateY(-5px);
   cursor: pointer;
 }
-
+/* Aqui adicionei o estilo a todos os cartões, utilizando o flexbox
+O column gap e row gap cria espaço entre os cards, pois o wrap deixa todos bem próximos.
+A margin dá um espaço entre o menu superior e entre os cartões. */
 .todos-os-cartoes {
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +72,20 @@ body {
   row-gap: 20px;
   justify-content: center;
   margin: 30px;
+}
+
+.busca {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 10px;
+}
+.busca h1 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.busca label {
+  font-size: 20px;
 }
 
 
