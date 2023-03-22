@@ -34,17 +34,27 @@ const filtrarCartoes = function (diretorSelecionado) {
 }
 
 const timeline = document.getElementById("timeline-id")
-timeline.addEventListener("change", function (event){
+timeline.addEventListener("change", function (event) {
   ordenarTempo(event.target.value)
 })
 
-// const ordenarTempo = function (ordemSelecionada) {
-  // próximo passo: usar método sort pra criar essa função que vai entrar aqui
- // const arrayDeFilmes = data.films;
- // if (ordemSelecionada = "Antigo para recente") {
- //   arrayDeFilmes.sort(a,b)
-    
- // }
-   
-// }
+// Usar método sort
+const ordenarTempo = function (ordemSelecionada) {
+  const arrayDeFilmes = data.films;
+  const arrayDeFilmesCopy = [...arrayDeFilmes];
+  arrayDeFilmesCopy.sort(compareNumbers);
+    function compareNumbers(a, b) {
+      return Number(a.release_date) - Number(b.release_date);
+    } 
+  if (ordemSelecionada === "Antigo para recente") {
+      console.log(arrayDeFilmesCopy)
+  } else { 
+      console.log(arrayDeFilmesCopy.reverse())
+  }
+  printarCartoes(arrayDeFilmesCopy)
+}
 
+// próximos passos: 
+// 1. ajustar a função pro data.js (ler sobre funcoes puras pra entender pq tá separando o código pro data.js , entender
+// o conceito de funções, parâmetros)
+// 2. fazer o cálculo agregado
