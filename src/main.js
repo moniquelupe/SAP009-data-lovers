@@ -53,8 +53,8 @@ const ordenarTempo = function (ordemSelecionada) {
   }
   printarCartoes(arrayDeFilmesCopy)
 }
-
-// próximos passos: 
-// 1. ajustar a função pro data.js (ler sobre funcoes puras pra entender pq tá separando o código pro data.js , entender
-// o conceito de funções, parâmetros)
-// 2. fazer o cálculo agregado
+/* próximos passos: 
+ 1. ajustar a função pro data.js (ler sobre funcoes puras pra entender pq tá separando o código pro data.js , entender
+ o conceito de funções, parâmetros)
+2. fazer o cálculo agregado
+*/

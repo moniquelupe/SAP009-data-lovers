@@ -1,17 +1,25 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: whitesmoke;
-  color: #084475;
+  color: #284336;
+}
+
+.bg {
+  background-image: url("https://i.pinimg.com/originals/d1/fb/03/d1fb032d8c674497bed108893a150adb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
 }
 
 .cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #084475;
+  background-color: #284336;
   padding: 20px;
   border-radius: 5px;
-}
+  }
 
 .cabecalho_titulo {
   color: whitesmoke;
@@ -20,6 +28,8 @@ body {
 }
 
 .cabecalho_links {
+  display: flex;
+  justify-content: f;
   color: whitesmoke;
   font-size: 20px;
   text-decoration: none;
@@ -31,7 +41,7 @@ body {
 
 .cabecalho_links:hover {
   text-decoration: underline;
-  background-color: #469bd2;
+  background-color: #AEBA9A;
 }
 
 /* Estilo dos cartões
@@ -44,16 +54,23 @@ Esse seletor tá puxando a class card de dentro do main.js, na linha 8: <div cla
   box-shadow: 7px 7px 13px 0px rgba(0, 2, 4, 0.22);
   padding: 15px;
   transition: all 0.3s ease-out;
-  background-color: #469bd2;  
+  background-color: #284336;  
   width: 28%;
 }
+/* Estilo da imagem dentro do card*/
+.card img {
+  height: 300px;
+  overflow: hidden;
+}
+
 /* Estilo do nome do filme dentro do cartão */
 .card h2 {
   font-size: 25px;
+  color: #AEBA9A;
 }
 /* Estilo do parágrafo de info sobre o filme dentro do cartão */
 .card p {
-  color: #32373c;
+  color: whitesmoke;
   font-size: 15px;
 }
 /* O :hover adiciona interação ao cartão, nesse caso está dando uma 
