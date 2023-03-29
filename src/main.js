@@ -1,4 +1,5 @@
 import data from './data/ghibli/ghibli.js';
+import { filtrarCartoes, ordenarTempo } from './data.js';
 
 // Declarar a função printar cartões:
 const printarCartoes = function (arrayTela) {
@@ -18,43 +19,18 @@ const printarCartoes = function (arrayTela) {
 printarCartoes(data.films)
 const diretores = document.getElementById("diretores")
 diretores.addEventListener("change", function (event) {
-  filtrarCartoes(event.target.value)
+  const ResultadoFiltrado = filtrarCartoes(event.target.value, data.films)
+  printarCartoes(ResultadoFiltrado)
 })
-
-// Declarar função filtrar cartões:
-const filtrarCartoes = function (diretorSelecionado) {
-  const arrayDeFilmes = data.films
-  const diretorFiltrado = [];
-  for (let i of data.films) {
-    if (i.director.toLowerCase() === diretorSelecionado.toLowerCase()) {
-      diretorFiltrado.push(i);
-    }
-  }
-  printarCartoes(diretorFiltrado)
-}
 
 const timeline = document.getElementById("timeline-id")
 timeline.addEventListener("change", function (event) {
-  ordenarTempo(event.target.value)
+  const ResultadoOrdenado = ordenarTempo(event.target.value, data.films);
+  printarCartoes(ResultadoOrdenado);
 })
 
-// Usar método sort
-const ordenarTempo = function (ordemSelecionada) {
-  const arrayDeFilmes = data.films;
-  const arrayDeFilmesCopy = [...arrayDeFilmes];
-  arrayDeFilmesCopy.sort(compareNumbers);
-    function compareNumbers(a, b) {
-      return Number(a.release_date) - Number(b.release_date);
-    } 
-  if (ordemSelecionada === "Antigo para recente") {
-      console.log(arrayDeFilmesCopy)
-  } else { 
-      console.log(arrayDeFilmesCopy.reverse())
-  }
-  printarCartoes(arrayDeFilmesCopy)
-}
 /* próximos passos: 
- 1. ajustar a função pro data.js (ler sobre funcoes puras pra entender pq tá separando o código pro data.js , entender
- o conceito de funções, parâmetros)
+ 1. ajustar a função filtrar cartões e método sort pro data.js (ler sobre funcoes puras pra entender pq tá separando o código pro data.js , entender
+ o conceito de funções, parâmetros, retorno)
 2. fazer o cálculo agregado
 */
