@@ -1,32 +1,23 @@
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-// Declarar função filtrar cartões:
+// Função filtrar cartões:
 export const filtrarCartoes = function (diretorSelecionado, filtrarArray) {
   const diretorFiltrado = [];
-  for (let i of filtrarArray) {
+  for (const i of filtrarArray) {
     if (i.director.toLowerCase() === diretorSelecionado.toLowerCase()) {
       diretorFiltrado.push(i);
-    } 
+    }
   } return diretorFiltrado
 }
 
+// Função de ordenar por data de lançamento do filme:
 export const ordenarTempo = (ordemSelecionada, arrayDeFilmes) => {
   const arrayDeFilmesCopy = [...arrayDeFilmes];
   arrayDeFilmesCopy.sort(compareNumbers);
   function compareNumbers(a, b) {
     return Number(a.release_date) - Number(b.release_date);
-  } 
-  if (ordemSelecionada === "Antigo para recente") {
+  }
+  if (ordemSelecionada === "Oldest to Newest") {
     return arrayDeFilmesCopy;
-  } else { 
+  } else {
     return arrayDeFilmesCopy.reverse();
   }
 }

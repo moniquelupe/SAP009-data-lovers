@@ -1,35 +1,45 @@
-body {
+body,
+h1 {
   font-family: "Poppins", sans-serif;
-  background-color: whitesmoke;
+  font-weight: bold;
   color: #284336;
+  margin: 15px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  color: #284336;
+  margin: 0px 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .bg {
-  background-image: url("https://i.pinimg.com/originals/d1/fb/03/d1fb032d8c674497bed108893a150adb.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
+  margin: 0;
 }
 
 .cabecalho {
+  background-image: url("./data/ghibli/Hero.jpg");
+  background-size: 100% auto;
+  background-position: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  background-color: #284336;
-  padding: 20px;
-  border-radius: 5px;
-  }
+  padding: 30px;
+  height: 350px;
+  /* tá ajustando a altura do menu com o background */
+  align-items: flex-start;
+  /* tá ajustando o tamanho do hover em cima do link */
+}
 
 .cabecalho_titulo {
   color: whitesmoke;
   font-size: 30px;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .cabecalho_links {
   display: flex;
-  justify-content: f;
+  justify-content: flex-end;
   color: whitesmoke;
   font-size: 20px;
   text-decoration: none;
@@ -45,7 +55,7 @@ body {
 }
 
 /* Estilo dos cartões
-Esse seletor tá puxando a class card de dentro do main.js, na linha 8: <div class="card"> */ 
+Esse seletor tá puxando a class card de dentro do main.js, na linha 8: <div class="card"> */
 .card {
   display: flex;
   flex-direction: column;
@@ -54,9 +64,10 @@ Esse seletor tá puxando a class card de dentro do main.js, na linha 8: <div cla
   box-shadow: 7px 7px 13px 0px rgba(0, 2, 4, 0.22);
   padding: 15px;
   transition: all 0.3s ease-out;
-  background-color: #284336;  
+  background-color: #284336;
   width: 28%;
 }
+
 /* Estilo da imagem dentro do card*/
 .card img {
   height: 300px;
@@ -67,18 +78,23 @@ Esse seletor tá puxando a class card de dentro do main.js, na linha 8: <div cla
 .card h2 {
   font-size: 25px;
   color: #AEBA9A;
+  font-family: "Poppins", sans-serif;
 }
+
 /* Estilo do parágrafo de info sobre o filme dentro do cartão */
 .card p {
   color: whitesmoke;
   font-size: 15px;
+  font-family: "Poppins", sans-serif;
 }
+
 /* O :hover adiciona interação ao cartão, nesse caso está dando uma 
 leve mexida quando passamos o mouse em cima do cartão */
 .card:hover {
   transform: translateY(-5px);
   cursor: pointer;
 }
+
 /* Aqui adicionei o estilo a todos os cartões, utilizando o flexbox
 O column gap e row gap cria espaço entre os cards, pois o wrap deixa todos bem próximos.
 A margin dá um espaço entre o menu superior e entre os cartões. */
@@ -91,18 +107,17 @@ A margin dá um espaço entre o menu superior e entre os cartões. */
   margin: 30px;
 }
 
-.busca {
+.busca,
+.ordenar-tempo,
+busca h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 10px;
+  margin: 0px 15px 15px 15px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
 }
-.busca h1 {
-  font-size: 25px;
-  margin-bottom: 20px;
-}
+
 .busca label {
   font-size: 20px;
 }
-
-

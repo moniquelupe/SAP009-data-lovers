@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <title>Studio Ghibli Museum</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">  
 </head>
 
 <body class="bg">
@@ -17,9 +20,10 @@
   </header>
 
   <main>
+    <h1>Filmography</h1>
+    <p>Get to know about Ghibli's movies and creators!</p>
     <section class="busca">
-      <h1>Get to know about Ghibli's Creators!</h1>
-      <label for="diretores">Choose your favorite director:</label>
+      <label for="diretores">Choose your favorite director:</label><br>
       <select name="categoria" id="diretores">
         <option value="Click">Click here to select...</option>
         <option value="Hayao Miyazaki">Hayao Miyazaki</option>
@@ -31,12 +35,14 @@
       </select>
     </section>
     <section class="ordenar-tempo">
-      <label for="timeline-id">Timeline:</label>
+      <label for="timeline-id">Sort By:</label><br>
       <select name="timeline" id="timeline-id">
         <option value="Click">Click here to select...</option>
-        <option value="Antigo para recente">Antigo pra recente</option>
-        <option value="Recente pra antigo">Recente pra antigo</option>
+        <option value="Oldest to Newest">Oldest to Newest</option>
+        <option value="Newest to Oldest">Newest to Oldest</option>
       </select>
+      <div id="calculo-info">
+      </div>
     </section>
     <section class="todos-os-cartoes" id="cartões">
     </section>
