@@ -11,7 +11,7 @@ const printarCartoes = function (arrayTela) {
       <h2>${arrayTela[index].title}</h2> 
       <p>${arrayTela[index].release_date}</p>
       <p>${arrayTela[index].director}</p>
-      <p>${arrayTela[index].description}</p>
+      <p class="card-description">${arrayTela[index].description}</p>
     </div>
   `;
     document.getElementById("cartões").innerHTML += cartao; // inclui no html 
@@ -22,9 +22,9 @@ printarCartoes(data.films)
 const diretores = document.getElementById("diretores")
 diretores.addEventListener("change", function (event) {
   const ResultadoFiltrado = filtrarCartoes(event.target.value, data.films)
-  //Cálculo agregago (mostra a porcentagem de filmes de cada diretor)
+  //Cálculo agregado (calcula a porcentagem de filmes de cada diretor)
   document.getElementById("calculo-info").innerHTML = event.target.value + " realizou " + ResultadoFiltrado.length * 100 / data.films.length + "% dos filmes do Studio Ghibli."
-  printarCartoes(ResultadoFiltrado)
+  printarCartoes(ResultadoFiltrado) //printa na Tela a porcentagem de filmes de cada diretor
 })
 
 /* transformar o cáuculo agregado em uma função:
@@ -37,8 +37,3 @@ timeline.addEventListener("change", function (event) {
   const ResultadoOrdenado = ordenarTempo(event.target.value, ResultadoFiltrado);
   printarCartoes(ResultadoOrdenado);
 })
-
-/* próximos passos: 
- 1. criar testes
- 2. tornar responsivo
-*/

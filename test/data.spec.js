@@ -25,6 +25,7 @@ describe('odernarTempo', () => {
   });
 });
 
+//Teste da função de filtrar cartões:
 describe('filtrarCartoes', () => {
   it('Deve retornar apenas os filmes dirigidos por Hayao Miyazaki', () => {
     const diretorSelecionado = 'Hayao Miyazaki';
@@ -43,20 +44,3 @@ describe('filtrarCartoes', () => {
     expect(filtrarCartoes(diretorSelecionado, arrayDeFilmes)).toEqual(arrayDeFilmesFiltrados);
   });
 });
-
-/*
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});
-*/
