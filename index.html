@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Ghibli Museum</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg">
+
+  <header class="cabecalho">
+    <h1 class="cabecalho_titulo">GHIBLI MUSEUM</h1>
+    <a class="cabecalho_links" href=" https://studioghibli.com.br/studioghibli/" target="_blank">Home</a>
+    <a class="cabecalho_links" href=" https://studioghibli.com.br/studioghibli/" target="_blank">How to use</a>
+    <a class="cabecalho_links" href=" https://studioghibli.com.br/studioghibli/" target="_blank">About</a>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div>
+        <h1>Filmography</h1>
+        <p>Get to know about Ghibli's movies and creators!</p>
+      </div>
+      <section class="busca">
+        <label for="diretores">Choose your favorite director:</label><br>
+        <div class="select">
+          <select name="categoria" id="diretores">
+            <option value="Click">Click here to select...</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+          </select>
+        </div>
+      </section>
+      <section class="ordenar-tempo">
+        <label for="timeline-id">Sort By:</label><br>
+        <div class="select">
+          <select name="timeline" id="timeline-id">
+            <option value="Click">Click here to select...</option>
+            <option value="Oldest to Newest">Oldest to Newest</option>
+            <option value="Newest to Oldest">Newest to Oldest</option>
+          </select>
+        </div>
+        <div id="calculo-info">
+        </div>
+      </section>
+    </section>
+    <section class="todos-os-cartoes" id="cartões">
+    </section>
+  </main>
+
+  <footer></footer>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
