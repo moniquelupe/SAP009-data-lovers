@@ -23,7 +23,7 @@ const diretores = document.getElementById("diretores")
 diretores.addEventListener("change", function (event) {
   const ResultadoFiltrado = filtrarCartoes(event.target.value, data.films)
   //Cálculo agregado (calcula a porcentagem de filmes de cada diretor)
-  document.getElementById("calculo-info").innerHTML = event.target.value + " realizou " + ResultadoFiltrado.length * 100 / data.films.length + "% dos filmes do Studio Ghibli."
+  document.getElementById("calculo-info").innerHTML = event.target.value + " made " + ResultadoFiltrado.length * 100 / data.films.length + "% of Studio Ghibli movies."
   printarCartoes(ResultadoFiltrado) //printa na Tela a porcentagem de filmes de cada diretor
 })
 
